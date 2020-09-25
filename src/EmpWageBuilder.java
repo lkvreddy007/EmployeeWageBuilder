@@ -7,7 +7,7 @@ public class EmpWageBuilder {
 
 		System.out.println("Employee Wage Builder");
     
-    	int empHrs=0;
+    		int empHrs=0;
 		int empWage=0;
         
 		int empCheck=(int)Math.floor(Math.random()*10)%3;
