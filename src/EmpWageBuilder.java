@@ -8,10 +8,10 @@ public class EmpWageBuilder {
 
 		System.out.println("Employee Wage Builder");
     
-    	int empHrs=0;
+    		int empHrs=0;
 		int empWage=0;
-        int totalEmpWage=0;
-        for(int day =0;day<NUM_OF_WORKING_DAYS;day++) {
+        	int totalEmpWage=0;
+        	for(int day =0;day<NUM_OF_WORKING_DAYS;day++) {
         	
 			int empCheck=(int) Math.floor(Math.random()*10) % 3;
 			switch(empCheck) {
@@ -31,6 +31,6 @@ public class EmpWageBuilder {
 			totalEmpWage+=empWage;
 			System.out.println("Emp Wage "+empWage);
 		}
-        System.out.println("Total Emp Wage: "+totalEmpWage);
+        	System.out.println("Total Emp Wage: "+totalEmpWage);
 	}
 }
