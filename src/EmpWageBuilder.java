@@ -18,9 +18,9 @@ public class EmpWageBuilder {
 		
 	public void computeEmpWage(){
 		int empHrs=0;
-       	int totalEmpHrs=0;
-       	int totalWorkingDays=0;
-       	System.out.println(company+" :");
+       		int totalEmpHrs=0;
+       		int totalWorkingDays=0;
+       		System.out.println(company+" :");
 		while(totalEmpHrs<=maxHoursPerMonth && totalWorkingDays<numofWorkingDays) {
 			totalWorkingDays+=1;
 			int empCheck=(int) Math.floor(Math.random()*10) % 3;
@@ -39,8 +39,8 @@ public class EmpWageBuilder {
 			totalEmpHrs+=empHrs;
 			System.out.println("Day#: "+totalWorkingDays +" Emp Hr: "+empHrs);
        		}
-       	totalEmpWage=totalEmpHrs*empRatePerHour;
-       	System.out.println("Total Employee Wage for "+company+" is : "+totalEmpWage+"\n");
+       		totalEmpWage=totalEmpHrs*empRatePerHour;
+       		System.out.println("Total Employee Wage for "+company+" is : "+totalEmpWage+"\n");
        	
 	}
 	public static void main(String[] args) {
