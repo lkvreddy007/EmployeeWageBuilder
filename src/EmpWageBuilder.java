@@ -6,9 +6,9 @@ public class EmpWageBuilder {
 		
 		int IS_PART_TIME=1;
 		int IS_FULL_TIME=2;
-    	int EMP_RATE_PER_HOUR=20;
+    		int EMP_RATE_PER_HOUR=20;
     
-    	int empHrs=0;
+    		int empHrs=0;
 		int empWage=0;
         
 		double empCheck=Math.floor(Math.random()*10)%3;
