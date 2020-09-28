@@ -35,19 +35,23 @@ public class EmpWageBuilder {
 						break;
 					default:
 						empHrs=0;	
-				}
+			}
 			totalEmpHrs+=empHrs;
-			System.out.println("Day#: "+totalWorkingDays +" Emp Hr: "+empHrs);
-       		}
-       		totalEmpWage=totalEmpHrs*empRatePerHour;
-       		System.out.println("Total Employee Wage for "+company+" is : "+totalEmpWage+"\n");
-       	
+		  System.out.println("Day#: "+totalWorkingDays +" Emp Hr: "+empHrs);
+     }
+    totalEmpWage=totalEmpHrs*empRatePerHour;     	
+	}
+	@Override
+	public String toString() {
+		return "Total Employee Wage for "+company+" is : "+totalEmpWage;
 	}
 	public static void main(String[] args) {
 		System.out.println("Employee Wage Builder");
     		EmpWageBuilder heritage=new EmpWageBuilder("Heritage",30,20,100);
     		EmpWageBuilder smart=new EmpWageBuilder("Smart",15,22,150);
     		heritage.computeEmpWage();
+    		System.out.println(heritage);
     		smart.computeEmpWage();
+    		System.out.println(smart);
 	}
 }
