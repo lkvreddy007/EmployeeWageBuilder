@@ -1,6 +1,4 @@
-import java.util.Random;
-
-public class EmpWageBuilder {
+public class EmpWageBuilder implements IComputeEmpWage {
 	
 	public static final int IS_FULL_TIME = 1;
 	public static final int IS_PART_TIME = 2;
@@ -11,12 +9,15 @@ public class EmpWageBuilder {
     public EmpWageBuilder() {
     	companyEmpWageArray = new Company[5];
     }
-    private void addCompanyEmpWage(String company, int empRatePerHour,int numOfWorkingDays, int maxHoursPerMonth ) {
+    
+    @Override
+    public void addCompanyEmpWage(String company, int empRatePerHour,int numOfWorkingDays, int maxHoursPerMonth ) {
     	companyEmpWageArray[numOfCompany] = new Company(company, empRatePerHour, numOfWorkingDays, maxHoursPerMonth);
     numOfCompany++;
     }
     
-	private void computeEmpWage() {
+    @Override
+	public void computeEmpWage() {
 		for(int i =0; i < numOfCompany; i++) {
 			companyEmpWageArray[i].setTotalEmpWage(this.computeEmpWage(companyEmpWageArray[i]));
 		System.out.println(companyEmpWageArray[i]);
@@ -46,7 +47,11 @@ public class EmpWageBuilder {
 			System.out.println("Day: " + totalWorkingDays + " Emp Hr:  " + empHours);
 		}
        return totalEmpHours * companyEmpWage.empRatePerHour;
-
+	}
+	
+	@Override
+	public int getTotalWage(String company) {
+		return 0;
 	}
 	 public static void main(String[] args) {
 		 EmpWageBuilder empWageBuilder = new EmpWageBuilder();
