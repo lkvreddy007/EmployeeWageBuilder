@@ -56,13 +56,14 @@ public class EmpWageBuilder implements IComputeEmpWage {
 	
 	@Override
 	public int getTotalWage(String company) {
-		return 0;
+		return companyToEmpWageMap.get(company).totalEmpWage;
 	}
 	 public static void main(String[] args) {
 		 EmpWageBuilder empWageBuilder = new EmpWageBuilder();
 		 empWageBuilder.addCompanyEmpWage("Heritage",  20,  2,  10);
 		 empWageBuilder.addCompanyEmpWage("smart",  10,  4,  20);
 		 empWageBuilder.computeEmpWage();
+		 System.out.println("Total Wage for Heritage :"+empWageBuilder.getTotalWage("Heritage"));
 	 }
 	
 }
